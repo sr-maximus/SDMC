@@ -1,3 +1,9 @@
+"""
+CiberPerfilado: Modelo Sistemico Dimensional de Ciberperfilamiento MSDC/MDSC
+Desarrollado por: Sr.Maximus
+Fecha: 4/9/2024
+"""
+
 import math
 import requests
 from docx import Document
