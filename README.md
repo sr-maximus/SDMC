@@ -1,41 +1,139 @@
 # SDMC
-## Systemic Dimensional Model of Cyberprofiling
 
-I'm excited to announce that you can now download an improved version of the Python program for systemic dimensional cyberprofiling. This updated version not only implements the core functionalities discussed in [previous blog posts](https://www.linkedin.com/pulse/exploring-cyberprofiling-social-networks-systemic-model-edwin-pe%C3%B1uela-hcr7e/?trackingId=DBl9twegQU21%2BhSemikf4w%3D%3D) but also includes sample data to help you emulate the program’s behavior and better understand how it works.
+**Systemic Dimensional Model of Cyberprofiling**
 
-## What’s New in the Improved Version?
-### Sample Data Included:
+SDMC es una implementación abierta del Modelo Sistémico Dimensional de Ciberperfilamiento propuesto como apoyo a labores de SOCMINT. El proyecto convierte la base conceptual del TFM *Modelo sistémico dimensional de apoyo a labores de ciberperfilamiento para actividades de SOCMINT* en una herramienta reproducible para calcular, documentar y discutir perfiles dimensionales a partir de datos públicos y evaluaciones controladas.
 
-The improved program comes with preloaded sample data that represents different user profiles and network positions. This data allows you to simulate various scenarios and see how the program calculates profiles, influence, and total impact.
+El repositorio no pretende diagnosticar personalidad ni sustituir criterio profesional. Su objetivo es ofrecer un marco calculable, trazable y responsable para organizar percepciones observables en redes sociales, explicar los supuestos usados y producir reportes que puedan ser revisados por analistas.
 
-### Emulate the Program’s Behavior:
+## Qué contiene
 
-By running the program with the provided sample data, you can observe how different inputs affect the outputs. This will help you grasp the nuances of the model and how each dimension, weight, and network metric contributes to the final analysis.
+- Paquete Python `sdmc` con el modelo matemático principal.
+- CLI para analizar perfiles desde JSON o desde un ejemplo reproducible.
+- Validación de entradas para dimensiones, pesos, centralidad y parámetros.
+- Reporte Markdown automatizado para dejar evidencia del análisis.
+- Documentación metodológica derivada del TFM.
+- Pruebas unitarias para proteger la fórmula y la validación básica.
+- Script histórico `Cyberprofile_Tesis_Mejorado.py` conservado como wrapper de compatibilidad.
 
-### Automated Analysis Report:
+## Base del modelo
 
-The program has been enhanced to generate an automated analysis report. After processing the sample data `or any data you input`, the program outputs a detailed document that summarizes the findings, including user profiles, influence scores, and total network impact.
-This report is generated in a structured format, making it easy to interpret and use for further analysis or presentations.
+El TFM plantea que el ciberperfilamiento para SOCMINT puede entenderse como un sistema multidimensional donde interactúan:
 
-## How to Use the Improved Program?
+- SOCMINT: recolección y análisis de información pública de redes sociales.
+- Percepción visual humana: evaluación de datos visibles del perfil y publicaciones.
+- DISC: marco descriptivo de tendencias conductuales observables.
+- Teoría General de Sistemas: integración de sistemas abiertos, relaciones, atributos y entorno.
+- Influencia en red: lectura de impacto, centralidad y propagación por grados.
 
-### Download and Install:
+La versión ejecutable modela seis dimensiones:
 
-You can download the improved program from the link provided below. Make sure to follow the installation instructions included in the package.
+| Dimensión | Descripción sintética |
+| --- | --- |
+| D1 | Datos e información visibles del perfil |
+| D2 | Emoción percibida al leer contenido público |
+| D3 | Rasgos DISC observables como tendencia, no diagnóstico |
+| D4 | Relacionamiento o proxémica digital |
+| D5 | Percepción de influencia e impacto |
+| D6 | Grado de influencia percibida |
 
-### Run the Program with Sample Data:
+La fórmula base calcula el perfil ponderado:
 
-Once installed, simply run the program using the provided sample data to see how it operates. The sample data is designed to cover a range of scenarios, allowing you to explore the model's capabilities.
+```text
+P_u = alpha1*D1 + alpha2*D2 + alpha3*D3 + alpha4*D4 + alpha5*D5 + alpha6*D6
+```
 
-### Generate Your Own Analysis:
+Luego ajusta la influencia directa con centralidad de intermediación:
 
-You can also input your own data into the program. Whether you’re analyzing real-world data or creating hypothetical scenarios, the program will process it and generate a comprehensive analysis report.
+```text
+I_u = P_u * (1 + beta*C_b)
+```
 
-### Why Use the Improved Version?
-This version of the program is perfect for researchers, data scientists, and cybersecurity analysts who want to:
+Y estima la influencia por grados con decaimiento exponencial:
 
-- Understand the practical application of the systemic dimensional cyberprofiling model.
-- Experiment with different scenarios to see how changes in user profiles or network structures affect the results.
-- Automatically generate reports that can be used for decision-making or further research.
+```text
+I_u^(n) = I_u * e^(-lambda*n)
+```
 
-> By including sample data and report generation, this improved version of the program not only serves as a powerful analytical tool but also as an educational resource to deepen your understanding of advanced cyberprofiling techniques.
+El impacto total suma la influencia directa y la propagación hasta el grado configurado:
+
+```text
+T_u = sum(I_u * e^(-lambda*n)) para n = 0..N
+```
+
+## Instalación
+
+Requisitos:
+
+- Python 3.10 o superior.
+
+Uso directo desde el checkout:
+
+```bash
+python -m sdmc.cli --sample --format markdown --output report.md
+```
+
+Instalación editable para desarrollo:
+
+```bash
+python -m pip install -e .
+sdmc --sample --format json
+```
+
+## Uso con datos propios
+
+Crea un archivo JSON con dimensiones normalizadas entre `0` y `1`:
+
+```json
+{
+  "profile_id": "perfil_demo",
+  "dimensions": {
+    "D1": 0.8,
+    "D2": 0.6,
+    "D3": 0.7,
+    "D4": 0.5,
+    "D5": 0.9,
+    "D6": 0.4
+  },
+  "centrality_betweenness": 0.7,
+  "parameters": {
+    "alpha1": 0.25,
+    "alpha2": 0.2,
+    "alpha3": 0.15,
+    "alpha4": 0.15,
+    "alpha5": 0.15,
+    "alpha6": 0.1,
+    "beta": 0.6,
+    "lambda_decay": 0.25,
+    "max_degree": 3
+  }
+}
+```
+
+Ejecuta:
+
+```bash
+python -m sdmc.cli --input examples/sample_profile.json --format markdown --output report.md
+```
+
+## Uso responsable
+
+SDMC debe utilizarse sólo sobre información pública, con finalidad legítima, minimización de datos y revisión humana. Los resultados deben tratarse como indicadores de análisis, no como veredictos automáticos sobre una persona. El propio TFM identifica limitaciones de muestra, necesidad de más perfiles, participación interdisciplinaria y validación futura.
+
+Consulta:
+
+- [Base académica del TFM](docs/01-base-academica-tfm.md)
+- [Modelo matemático y dimensiones](docs/02-modelo-sistemico-dimensional.md)
+- [Metodología operativa](docs/03-metodologia-operativa.md)
+- [Ética, privacidad y uso responsable](docs/04-etica-privacidad-y-uso-responsable.md)
+- [Validación, limitaciones y trabajos futuros](docs/05-validacion-limitaciones-y-trabajos-futuros.md)
+
+## Pruebas
+
+```bash
+python -m unittest discover -s tests
+```
+
+## Estado
+
+Este repositorio es una base técnica y documental para investigación aplicada. No incluye el TFM completo ni datos personales de los perfiles evaluados. La documentación pública resume el fundamento, las fórmulas, los límites y los criterios de uso responsable para facilitar revisión, extensión y auditoría.
