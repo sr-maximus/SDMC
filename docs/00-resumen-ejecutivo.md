@@ -35,3 +35,4 @@ El resultado no es un diagnóstico de personalidad ni una sentencia automática.
 - [Metodología operativa](03-metodologia-operativa.md)
 - [Ética, privacidad y uso responsable](04-etica-privacidad-y-uso-responsable.md)
 - [Validación, limitaciones y trabajos futuros](05-validacion-limitaciones-y-trabajos-futuros.md)
+- [Licencia y uso comercial](06-licencia-y-uso-comercial.md)
