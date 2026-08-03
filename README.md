@@ -2,9 +2,17 @@
 
 **Systemic Dimensional Model of Cyberprofiling**
 
-SDMC es una implementación abierta del Modelo Sistémico Dimensional de Ciberperfilamiento propuesto como apoyo a labores de SOCMINT. El proyecto convierte la base conceptual del TFM *Modelo sistémico dimensional de apoyo a labores de ciberperfilamiento para actividades de SOCMINT* en una herramienta reproducible para calcular, documentar y discutir perfiles dimensionales a partir de datos públicos y evaluaciones controladas.
+SDMC es una implementación pública y source-available del Modelo Sistémico Dimensional de Ciberperfilamiento propuesto como apoyo a labores de SOCMINT. El proyecto convierte la base conceptual del TFM *Modelo sistémico dimensional de apoyo a labores de ciberperfilamiento para actividades de SOCMINT* en una herramienta reproducible para calcular, documentar y discutir perfiles dimensionales a partir de datos públicos y evaluaciones controladas.
 
 El repositorio no pretende diagnosticar personalidad ni sustituir criterio profesional. Su objetivo es ofrecer un marco calculable, trazable y responsable para organizar percepciones observables en redes sociales, explicar los supuestos usados y producir reportes que puedan ser revisados por analistas.
+
+## Licencia y uso comercial
+
+SDMC es público para consulta, revisión académica y evaluación no comercial, pero **no es software libre/open source ni permite uso comercial sin pago**. Todo derecho económico queda reservado por Edwin Javier Peñuela Camacho.
+
+Cualquier uso comercial, profesional, institucional, remunerado, de consultoría, SOCMINT/OSINT operativo, capacitación pagada, integración en productos, servicios, reportes para clientes, SaaS, API, dashboard, dataset, modelo, flujo interno de negocio o cualquier beneficio económico directo o indirecto requiere autorización previa por escrito y una licencia comercial pagada.
+
+Consulta la licencia completa en [LICENSE](LICENSE).
 
 ## Qué contiene
 
@@ -127,6 +135,7 @@ Consulta:
 - [Metodología operativa](docs/03-metodologia-operativa.md)
 - [Ética, privacidad y uso responsable](docs/04-etica-privacidad-y-uso-responsable.md)
 - [Validación, limitaciones y trabajos futuros](docs/05-validacion-limitaciones-y-trabajos-futuros.md)
+- [Licencia y uso comercial](docs/06-licencia-y-uso-comercial.md)
 
 ## Pruebas
 
@@ -137,3 +146,5 @@ python -m unittest discover -s tests
 ## Estado
 
 Este repositorio es una base técnica y documental para investigación aplicada. No incluye el TFM completo ni datos personales de los perfiles evaluados. La documentación pública resume el fundamento, las fórmulas, los límites y los criterios de uso responsable para facilitar revisión, extensión y auditoría.
+
+La disponibilidad pública del repositorio no autoriza explotación comercial sin licencia pagada del autor.

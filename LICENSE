@@ -1,21 +1,112 @@
-MIT License
+SDMC SOURCE-AVAILABLE NON-COMMERCIAL LICENSE
 
-Copyright (c) 2024 Sr. Maximus
+Copyright (c) 2024-2026 Edwin Javier Peñuela Camacho, also known as
+Sr. Maximus. All rights reserved.
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+This license applies to the SDMC project, including source code, examples,
+documentation, reports, formulas, methodology, model descriptions, and any
+other material contained in this repository, unless a different written license
+is expressly stated for a specific file.
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+1. Ownership
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+The SDMC project is based on the author's master's thesis and related research
+work. All copyright, moral rights, economic rights, and related intellectual
+property rights remain reserved by Edwin Javier Peñuela Camacho.
+
+Publication of this repository on GitHub does not place the work in the public
+domain and does not grant an open source, free software, commercial, or
+sublicensable license.
+
+2. Permitted non-commercial access
+
+You may, without payment:
+
+- view and read the repository through GitHub;
+- fork the repository through GitHub only as allowed by GitHub's platform
+  functionality and only for non-commercial review, academic reference,
+  personal evaluation, or private testing;
+- run the software locally for personal, non-commercial learning, evaluation,
+  or academic research; and
+- quote limited portions of the documentation or code for citation, review, or
+  academic discussion, provided that attribution to the author and repository is
+  preserved.
+
+These permissions are limited, revocable upon breach, non-exclusive,
+non-transferable, and do not allow sublicensing.
+
+3. Commercial use is prohibited without a paid written license
+
+Any commercial, revenue-generating, professional, institutional, operational,
+or economic use requires prior written authorization and a paid commercial
+license agreement signed by Edwin Javier Peñuela Camacho.
+
+Without such paid written license, you may not:
+
+- sell, license, sublicense, rent, lease, or monetize the project or any
+  derivative work;
+- use SDMC in paid consulting, investigation, intelligence, SOCMINT, OSINT,
+  cybersecurity, compliance, due diligence, training, reporting, software, SaaS,
+  API, platform, dashboard, or analytics services;
+- incorporate SDMC into commercial products, internal business systems,
+  professional workflows, client deliverables, proprietary datasets, commercial
+  models, or paid educational material;
+- generate reports, assessments, analyses, decisions, rankings, profiles, or
+  other outputs for paying clients, employers, customers, partners, or
+  organizations;
+- use SDMC to obtain, support, or enhance any economic benefit, direct or
+  indirect, unless that benefit is covered by a paid written license from the
+  author;
+- remove or alter copyright, attribution, authorship, license, or commercial
+  rights notices; or
+- redistribute modified or unmodified copies outside GitHub without prior
+  written authorization.
+
+4. Economic rights
+
+All economic exploitation rights are reserved by Edwin Javier Peñuela Camacho.
+Any third-party economic benefit derived from SDMC, its methodology, formulas,
+documentation, implementation, outputs, derivatives, or substantially similar
+adaptations must be authorized by the author through a paid written license.
+
+No royalty-free commercial rights are granted by this license.
+
+5. Academic attribution
+
+Any non-commercial academic or research reference must cite the author and the
+project:
+
+Edwin Javier Peñuela Camacho (Sr. Maximus), "SDMC - Systemic Dimensional Model
+of Cyberprofiling", based on the master's thesis "Modelo sistémico dimensional
+de apoyo a labores de ciberperfilamiento para actividades de SOCMINT".
+
+6. Prior versions
+
+Earlier copies of this repository may have been made available under the MIT
+License before this license change. This license does not attempt to revoke
+permissions already granted for copies lawfully obtained under an earlier
+license. However, the current and future versions of SDMC are not MIT-licensed,
+and no new MIT permissions are granted for this repository from the publication
+of this license onward.
+
+7. No warranty
+
+THE PROJECT IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR
+A PARTICULAR PURPOSE, ACCURACY, NON-INFRINGEMENT, OR LEGAL COMPLIANCE. THE
+AUTHOR SHALL NOT BE LIABLE FOR ANY CLAIM, DAMAGE, LOSS, OR LIABILITY ARISING
+FROM USE OF THE PROJECT.
+
+8. Termination
+
+Any use outside the permitted non-commercial access or any breach of this
+license automatically terminates the permissions granted here. Upon termination,
+you must stop using SDMC and delete any unauthorized copies, derivatives, and
+outputs under your control.
+
+9. Commercial licensing contact
+
+For commercial licensing, paid authorization, or institutional use, contact the
+author through the GitHub repository owner profile:
+
+https://github.com/sr-maximus

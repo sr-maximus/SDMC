@@ -8,14 +8,14 @@ version = "0.2.0"
 description = "Systemic Dimensional Model of Cyberprofiling for SOCMINT analysis"
 readme = "README.md"
 requires-python = ">=3.10"
-license = { text = "MIT" }
+license = { text = "Source-Available Non-Commercial License" }
 authors = [
   { name = "Sr. Maximus" }
 ]
 keywords = ["socmint", "osint", "cyberprofiling", "disc", "systems-theory"]
 classifiers = [
   "Programming Language :: Python :: 3",
-  "License :: OSI Approved :: MIT License",
+  "License :: Other/Proprietary License",
   "Topic :: Security",
   "Topic :: Scientific/Engineering :: Information Analysis"
 ]
